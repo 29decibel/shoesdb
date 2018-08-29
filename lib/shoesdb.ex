@@ -17,6 +17,9 @@ defmodule Shoesdb do
   end
 
   def start_crawling do
-    Crawler.crawl("https://www.runningwarehouse.com/fpm.html", max_depths: 5, save_to: "/Users/mikeli/projects/shoesdb/running-warehouse")
+    Crawler.crawl("https://www.runningwarehouse.com/fpm.html",
+      max_depths: 5, 
+      save_to: "./",
+      url_filter: CrawlerURLFilter)
   end
 end
